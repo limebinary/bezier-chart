@@ -771,7 +771,7 @@ class BezierChartState extends State<BezierChart>
     );
     _buildXDataPoints();
     _computeSeries();
-    WidgetsBinding.instance!.addPostFrameCallback(_onLayoutDone);
+    WidgetsBinding.instance.addPostFrameCallback(_onLayoutDone);
     super.initState();
   }
 
@@ -1428,7 +1428,7 @@ class _BezierChartPainter extends CustomPainter {
         ///Draw Bubble Indicator Info
 
         /// Draw shadow bubble info
-        if (animation!.isCompleted) {
+        /*if (animation!.isCompleted) {
           Path path = Path();
           path.moveTo(center.dx - infoWidth / 2 + 4,
               center.dy - offsetInfo + infoHeight / 1.8);
@@ -1439,7 +1439,7 @@ class _BezierChartPainter extends CustomPainter {
           //path.close();
           // canvas.drawShadow(path, Colors.black, 20.0, false);
           canvas.drawPath(path, paintControlPoints..color = Colors.black12);
-        }
+        }*/
 
         final paintInfo = Paint()
           ..color = config!.bubbleIndicatorColor
